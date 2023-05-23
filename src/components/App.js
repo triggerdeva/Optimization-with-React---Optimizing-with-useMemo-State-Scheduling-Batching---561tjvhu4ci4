@@ -17,7 +17,7 @@ const isArmstrongNumber = (number) => {
 const App = () => {
   const [num, setNum] = useState('');
   const [count, setCount] = useState(1);
-  const isArmstrong = isArmstrongNumber(num);
+  const isArmstrong = useMemo(()=>isArmstrongNumber(num),[num]);
  
   return (
     <div className="App">
